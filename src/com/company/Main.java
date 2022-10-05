@@ -4,28 +4,27 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        firstMethod(17, -22);
-        firstMethod(21, -19);
-        firstMethod(7, 1);
-        firstMethod(60, -6);
-        firstMethod(44, 29);
-        firstMethod(generateRandomAge(), 12);
-
+        System.out.println(firstMethod(17, -22));
+        System.out.println(firstMethod(21, -19));
+        System.out.println(firstMethod(7, 1));
+        System.out.println(firstMethod(60, -6));
+        System.out.println(firstMethod(44, 29));
+        System.out.println(firstMethod(generateRandomAge(), 12));
 
     }
-    public static int firstMethod(int age, int temperature){
+    public static String firstMethod(int age, int temperature){
         if ((20<age && age<45) && (-20<temperature && temperature<30)){
-            System.out.println("Можно идти гулять");
+            return "Можно идти гулять";
         }
         else if ((age<20) && (0<temperature && temperature<28)){
-            System.out.println("Можно идти гулять");
+            return "Можно идти гулять";
         }
         else if ((age>45) && (-10<temperature && temperature<25)){
-            System.out.println("Можно идти гулять");
-        }else {
-            System.out.println("Оставайтесь дома");
+            return "Можно идти гулять";
         }
-        return age;
+        else{
+            return "Оставайтсь дома";
+        }
     }
 
     // 2 task
